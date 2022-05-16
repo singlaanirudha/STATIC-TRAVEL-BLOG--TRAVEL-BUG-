@@ -2,7 +2,7 @@
  ## Hand code travel blog Website, Designed and Developed by Anirudha Singla ✌.
  
  PREVIEW -
- # You can see a live preview of the Website on - [www.travelbug.com](https://travel-bug-blog.netlify.app). (deployed using Git Hub Pages)
+ # You can see a live preview of the Website on - [www.travelbug.com](https://travel-bug-blog.netlify.app).
  
  **TECHNOLOGY USED**
  1. ***FRONT END-*** 
