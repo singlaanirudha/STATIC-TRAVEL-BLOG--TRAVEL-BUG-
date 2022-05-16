@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" href="./fp_imgs/favicon.png" type="image/x-icon">	<!-- favicon -->
+
+	<title>TRAVEL BUG | INDEX</title>
+
+<!-- bootstrap css cdn	 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<!-- index css linking cdn -->
+<link rel="stylesheet" type="text/css" href="./fp_css/fp_index_css.css">
+
+<!-- slider google font cdn -->
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap" rel="stylesheet">
+
+<!-- enter destination google font cdn -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+<!-- travel bug pro destnation heading google font cdn -->
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+<!-- gallery heading google font cdn -->
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
+<!-- jquery cdn -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- font awesome cdn -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+<!-- scroll indicator start -->
+
+<div class="progress-container position-sticky">
+    <div class="progress-bar" id="myBar"></div>
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
+
+<!-- scroll indicator end -->
+
+<!-- nav bar start -->
+
+<div class="container-fluid p-0 nav_header" id="page_start">
+	
+	<div class=" d-flex" style="height: 90px;">
+		
+		<div class=" flex-shrink btn_hover" onclick="openNav()">
+			<i class="m-3 fa fa-bars" style="font-size:50px"></i>
+		</div>
+		
+		<div class=" flex-fill"> 
+			<div class="logo mx-auto">
+			<img src="./fp_imgs/logo1.png" width="100%" height="100%"> 
+			</div>
+		</div>
+
+		<div class=" flex-shrink me-3 pt-3 btn_hover" title="SEARCH" onclick="openSearch()">
+			<img src="./fp_imgs/icons/search.png" height="40px" width="40px">
+		</div>
+
+		<!-- search overlay start -->
+		<div id="sb_myOverlay" class="sb_overlay">
+		  <span class="sb_closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+		  <div class="sb_overlay-content">
+		    <form method="post">
+		      <input class="sb_search" type="text" placeholder="Search Destination" name="search"> <br><br>
+		      <input type="submit" name="search" value="SEARCH" class="sb_button">
+		    </form>
+		  </div>
+		</div>
+
+		<script>
+		function openSearch() {
+		  document.getElementById("sb_myOverlay").style.display = "block";
+		}
+
+		function closeSearch() {
+		  document.getElementById("sb_myOverlay").style.display = "none";
+		}
+		</script>
+
+		<!-- search overlay end -->
+
+		<div class=" flex-shrink me-1 p-2 btn_hover" title="PROFILE" data-bs-toggle="modal" data-bs-target="#profile_modal">
+			<img src="./fp_imgs/profile.png" height="50px" width="50px">
+		</div>
+
+	</div>
+
+</div>
+
+<!-- nav bar end -->
+
+
+<!-- slider carousel start	 -->
+
+<div class="contaier-fluid" style="overflow-x: hidden;" id="page_top">
+
+	<div class="row">
+		
+		<div id="slider_carousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+
+			  <div class="carousel-indicators">
+			    <button type="button" data-bs-target="#slider_carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+			    <button type="button" data-bs-target="#slider_carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+			    <button type="button" data-bs-target="#slider_carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			    <button type="button" data-bs-target="#slider_carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+			  </div>
+		  	  
+		  <div class="carousel-inner">
+		    
+		    <div class="carousel-item slider_dmns active s1" data-bs-interval="4000">
+
+		  		<div class="slider_text mt-3 mx-auto text-center pt-5">
+		  			
+		  			<p>We are here to</p>
+		  			<p>Planning Business</p>
+		  			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		  			tempor incididunt ut labore et dolore magna aliqua.</p>
+
+		  			<button class="more_details_box btn_hover">
+		  				<a href="#">MORE DETAILS</a>
+		  			</button>
+
+		  		</div>
+
+		    </div>
+		    
+		    <div class="carousel-item slider_dmns s2" data-bs-interval="4000">
+		     
+		     	<div class="slider_text mt-3 mx-auto text-center pt-5">
+		  			
+		  			<p>We are here to</p>
+		  			<p>Make Journey</p>
+		  			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		  			tempor incididunt ut labore et dolore magna aliqua.</p>
+
+		  			<button class="more_details_box btn_hover">
+		  				<a href="#">MORE DETAILS</a>
+		  			</button>
+
+		  		</div>
+
+		    </div>
+		    
+		    <div class="carousel-item slider_dmns s3" data-bs-interval="4000">
+		     
+		     	<div class=" slider_text mt-3 mx-auto text-center pt-5">
+		  			
+		  			<p>We provide</p>
+		  			<p>Great Service</p>
+		  			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		  			tempor incididunt ut labore et dolore magna aliqua.</p>
+
+		  			<button class="more_details_box btn_hover">
+		  				<a href="#">MORE DETAILS</a>
+		  			</button>
+
+		  		</div>
+
+		    </div>
+
+		    <div class="carousel-item slider_dmns s4" data-bs-interval="4000">
+		     
+		     	<div class=" slider_text mt-3 mx-auto text-center pt-5">
+		  			
+		  			<p>We give high</p>
+		  			<p>Quality Service</p>
+		  			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		  			tempor incididunt ut labore et dolore magna aliqua.</p>
+
+		  			<button class="more_details_box btn_hover">
+		  				<a href="#">MORE DETAILS</a>
+		  			</button>
+
+		  		</div>
+
+		    </div>
+		  
+		  </div>
+		
+		</div>
+
+	</div>
+	
+</div>
+
+<!-- slider carousel end -->
+
+
+<!-- booking container start -->
+
+<div class="contaier-fluid mx-auto sd_overlap">
+
+	<div class="row text-center">
+		<p class="sd_text">SELECT DESTINATION</p>
+	</div>
+	
+	<div class="row">
+		
+		<div class="col-md-8 text-center mx-auto pt-3 sd_dmns">
+			
+		<form method="post" onsubmit="return sd_val()" name="sd" class="d-flex flex-wrap justify-content-around">
+
+		  <div class=" df_col">
+		  	
+			<input class="form-control" id="date" name="date" type="date" required>
+
+		  </div>
+		  
+		  <div class=" df_col">
+		  	
+		  	<select class="form-select" id="adult">
+		  	  <option value="0" selected>Adults</option>
+		      <option>1</option>
+		      <option>2</option>
+		      <option>3</option>
+		      <option>4</option>
+		      <option>5</option>
+		    </select>
+
+		  </div>
+		  
+		  <div class=" df_col">
+		  	
+		  	<select class="form-select" id="child">
+		  	  <option value="0" selected>Children</option>
+		      <option>0</option>
+		      <option>1</option>
+		      <option>2</option>
+		      <option>3</option>
+		      <option>4</option>
+		      <option>5</option>
+		    </select>
+
+		  </div>
+		  
+		  <div class=" df_col">
+		  	
+		  	<select class="form-select" id="dest">
+		  	  <option value="0" selected>Select Destination</option>
+		      <option>India</option>
+		      <option>Abroad</option>
+		    </select>
+
+		  </div>
+		  
+		  <div class=" df_col">
+		  	
+			<input type="text" class="form-control" placeholder="Budget (Rs)" required>
+
+		  </div>
+		  
+		  <div class="df_col">
+		  	<button type="submit" class="check_button btn_hover"> EXPLORE </button>
+		  </div>
+		
+		</form>
+			
+			
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<script>
+function sd_val()
+{
+	if(document.sd.adult.value == "0")
+	{
+		alert("Please select number of adults");
+		return false;
+	}
+
+	else if(document.sd.child.value == "0")
+	{
+		alert("Please select number of childred");
+		return false;	
+	}
+
+	else if(document.sd.dest.value == "0")
+	{
+		alert("Please select destination");
+		return false;	
+	}
+
+	alert("Form was submitted");
+	return true;
+
+}
+</script> 
+<!-- booking container end -->
+
+
+
+<!-- travel bud pro destinations start -->
+
+<div class="contaier-fluid  tbp_dmns">
+	
+	<div class="row tbp_dest text-center mt-4" id="tbp_heading">
+		
+		<p>WELCOME TO</p>
+		<p>TravelBug Pro Destination</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. <br> Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip <br> ex ea commodo
+		consequat.</p>
+
+	</div>
+
+	<div class="row ">
+		
+		<div class="col-lg-5 mx-auto px-0 pt-5 ">
+			<img src="./fp_imgs/tbplus.jpg" width="100%" height="80%">
+		</div>
+
+		<div class="col-lg-5 mx-auto" id="tbp_points">
+			
+			<p class="tbp_heading">Conscientious & <br> Professional Services</p>
+			<p>
+				<ul class="tbp_list">
+					<li>Professional Serving</li>
+					<li>High Quality Services</li>
+					<li>Easy Booking & Payment</li>
+					<li>Modern Equipments</li>
+					<li>The World's Top Chefs</li>
+					<li>Interesting Activities</li>
+				</ul>
+			</p>
+
+		</div>
+
+	</div>
+
+</div>
+
+<!-- travel bud pro destinations end -->
+
+
+<!-- top destination start -->
+
+<div class="contaier-fluid " style="overflow-x: hidden;">
+	
+	<div class="row td_heading ">
+		<center>TOP DESTINATIONS</center>
+	</div>
+
+	<div class="row " style="margin-top: -25px;">
+
+		<div class="col-md-2 p-0 container ">
+			<img src="./fp_imgs/g1.jpg" height="220px" width="100%">
+			
+			  <div class="g_overlay">
+    			<div class="text"><a href="#" style="color: white; font-size: 20px;">Paris, <br> France</a></div>
+			  </div>
+		</div>
+
+		<div class="col-md-2 p-0 container ">
+			<img src="./fp_imgs/g2.jpg" height="220px" width="100%">
+
+			<div class="g_overlay">
+    			<div class="text"><a href="#" style="color: white; font-size: 20px;">London, <br> UK</a></div>
+			  </div>
+		</div>
+
+		<div class="col-md-2 p-0 container ">
+			<img src="./fp_imgs/g3.jpg" height="220px" width="100%">
+
+			<div class="g_overlay">
+    			<div class="text"><a href="#" style="color: white; font-size: 20px;">Leh, <br> India</a></div>
+			</div>
+		</div>
+
+		<div class="col-md-2 p-0 container ">
+			<img src="./fp_imgs/g4.jpg" height="220px" width="100%">
+
+			<div class="g_overlay">
+    			<div class="text"><a href="#" style="color: white; font-size: 20px;">New York, <br> U.S.A</a></div>
+			</div>
+		</div>
+
+		<div class="col-md-2 p-0 container ">
+			<img src="./fp_imgs/g5.jpg" height="220px" width="100%">
+
+			<div class="g_overlay">
+    			<div class="text"><a href="#" style="color: white; font-size: 20px;">Toronto, <br> Canada</a></div>
+			</div>
+		</div>
+
+		<div class="col-md-2 p-0 container ">
+			<img src="./fp_imgs/g6.jpg" height="220px" width="100%">
+
+			<div class="g_overlay">
+    			<div class="text"><a href="#" style="color: white; font-size: 20px;">Sydney, <br> Australia</a></div>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+<!-- top destination end -->
+
+
+
+<!-- blog start -->
+
+<div class="contaier-fluid" style="overflow: hidden;">
+	
+	<div class="row tbp_dest text-center mt-4" id="blog">
+		
+		<p>BLOG NEWS</p>
+		<p>Latest Post From Blog </p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. <br> Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip <br> ex ea commodo
+		consequat.</p>
+
+	</div>
+
+	<div class="row justify-content-center">
+
+		<div class="col-md-3 m-2 p-0 card card_dmns" id="card1">
+			
+			<img class="mx-auto" src="./fp_imgs/b1.jpg" alt="..." width="100%" height="200px">
+ 
+		  <div class="card-body">
+		  	<p>17 May 2019 by admin</p>
+		  	<p>Best Marketing Tips For Business Growth Rapidly </p>
+		  	<p>2 min Read</p>
+		    <a href="#" class="btn btn_hover" style="background: #b0914f;">Explore More</a>
+			</div>
+
+		</div>
+
+		<div class="col-md-3 m-2 p-0 card card_dmns " id="card2">
+			
+			<img class="mx-auto" src="./fp_imgs/b2.jpg" alt="..." width="100%" height="200px">
+ 
+		  <div class="card-body">
+		  	<p>5 Jan 2021 by admin</p>
+		  	<p>Why Choose Sparta Plaza Hotel To Travel This Summer</p>
+		    <p>4 min Read</p>
+		    <a href="#" class="btn btn_hover" style="background: #b0914f;">Explore More</a>
+			</div>
+
+		</div>
+
+		<div class="col-md-3 m-2 p-0 card card_dmns " id="card3">
+			
+			<img class="mx-auto" src="./fp_imgs/b3.jpg" alt="..." width="100%" height="200px">
+ 
+		  <div class="card-body">
+		  	<p>10 June 2019 by admin</p>
+		  	<p>The Best Room In The Hotel To Stay Long With Family</p>
+		  	<p>5 min Read</p>
+		    <a href="#" class="btn btn_hover" style="background: #b0914f;">Explore More</a>
+			</div>
+
+		</div>
+		
+
+	</div>
+
+</div>
+
+
+
+<!-- blog end -->
+
+<!-- testimonials start -->
+
+<div class="contaier-fluid" style="overflow-x: hidden;">
+	
+	<div class="row " >
+		
+		<div class="col-md-3 offset-md-2 testimonial_font ">
+			
+			<p>TESTIMONIAL</p>
+			<p>Customers <br> Satisfaction</p>
+
+		</div>
+
+		<div class="col-md-7 pt-5 s2" style="background-attachment: fixed !important;">
+				
+			<div class="mt-5 testimonial_carousel">
+				
+				<div class="carousel slide" data-bs-ride="carousel">
+				  
+				  <div class="carousel-inner">
+				    
+				    <div class="carousel-item active" data-bs-interval="2000">
+
+				    	<img src="./fp_imgs/icons/quotes.png" height="50px" width="50px">
+
+				    	<p class="testimonial_carousel_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				    	consequat. <br><br>
+
+				    	<img src="./fp_imgs/icons/m1.png" height="50px" width="50px">
+
+				    	Aditya.</p>
+
+				    </div>
+				    
+				    <div class="carousel-item" data-bs-interval="2000">
+				    	
+				    	<img src="./fp_imgs/icons/quotes.png" height="50px" width="50px">
+
+				    	<p class="testimonial_carousel_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				    	tempor incididunt ut labore et dolore magna aliqua. <br><br>
+
+				    	<img src="./fp_imgs/icons/m2.png" height="60px" width="60px">
+
+				    	Sanya. </p>
+
+				    </div>
+				    
+				    <div class="carousel-item" data-bs-interval="2000">
+						
+				    	<img src="./fp_imgs/icons/quotes.png" height="50px" width="50px">
+
+				    	<p class="testimonial_carousel_text">Deals always tend to be hard to beat on travel online. We've booked with them for years for this reason. On this occasion, it took a long while (many days) on a few occasions for travel online to return phone calls, we had to chase them up. <br><br>
+
+				    	<img src="./fp_imgs/icons/m3.png" height="60px" width="60px">
+
+				    	Sukriti.</p>
+
+				    </div>
+				  
+				  </div>
+				  
+				</div>
+
+			</div>	
+
+
+		</div>
+
+	</div>
+
+</div>
+
+<!-- testimonials end -->
+
+
+<!-- gallery start -->
+
+<div class="contaier-fluid mt-5" style="overflow-x: hidden;">
+	
+	<div class="row justify-content-center td_heading " style="font-family: 'Comfortaa', cursive !important;">
+		GALLERY
+	</div>
+
+	<div class="row">
+		
+		<div class="container-fluid" style="overflow-x: hidden;">
+	
+			<div class="row">
+				
+				<div class="col-md-7 mx-auto d-flex flex-wrap mb-4 justify-content-center gallery_tabs ">
+					
+					<div class="flex-item mx-auto tablinks gallery_tabs_item btn_hover active" onclick="openCity(event, 'india')" id="defaultOpen"> INDIA </div>
+					<div class="flex-item mx-auto tablinks gallery_tabs_item btn_hover " onclick="openCity(event, 'europe')"> EUROPE </div>
+					<div class="flex-item mx-auto tablinks gallery_tabs_item btn_hover" onclick="openCity(event, 'australia')"> AUSTRALIA </div>
+					<div class="flex-item mx-auto tablinks gallery_tabs_item btn_hover" onclick="openCity(event, 'usa')"> U.S.A </div>
+					<div class="flex-item mx-auto tablinks gallery_tabs_item btn_hover" onclick="openCity(event, 'canada')"> CANADA </div>
+					<div class="flex-item mx-auto tablinks gallery_tabs_item btn_hover" onclick="openCity(event, 'dubai')"> DUBAI </div>
+
+				</div>
+
+				<div class="row">
+					
+					<div class="col-md-9 mx-auto">
+						
+						<div id="india" class="tabcontent">
+						  
+						  <div class="row d-flex flex-wrap">
+		  
+							  <div class="column">
+							    <img src="./fp_imgs/in1.png" height="280px">
+							    <img src="./fp_imgs/in2.jpg" height="220px">
+							  </div>
+
+							  <div class="column">
+							        <img src="./fp_imgs/in4.jpg" height="200px">
+							    <img src="./fp_imgs/in3.jpg" height="300px">
+							  </div>
+
+							  <div class="column">
+							        <img src="./fp_imgs/in5.jpg" height="250px">
+							    <img src="./fp_imgs/in6.jpg" height="250px">
+							  </div>
+
+							</div>
+
+						</div>
+
+						<div id="europe" class="tabcontent">
+						  
+						  <div class="row d-flex flex-wrap">
+		  
+							  <div class="column">
+							    <img src="./fp_imgs/eu1.jpg" height="280px">
+							    <img src="./fp_imgs/eu2.jpg" height="220px">
+							  </div>
+
+							  <div class="column">
+							        <img src="./fp_imgs/eu4.jpg" height="200px">
+							    <img src="./fp_imgs/eu3.jpg" height="300px">
+							  </div>
+
+							  <div class="column">
+							        <img src="./fp_imgs/eu5.jpg" height="250px">
+							    <img src="./fp_imgs/eu6.jpg" height="250px">
+							  </div>
+
+							</div>
+
+						</div>
+
+						<div id="australia" class="tabcontent">
+						  
+						  <div class="row d-flex flex-wrap">
+		  
+							  <div class="column">
+							    <img src="./fp_imgs/aus1.jpg" height="280px">
+							    <img src="./fp_imgs/aus2.jpg" height="220px">
+							  </div>
+
+							  <div class="column">
+							        <img src="./fp_imgs/aus4.jpg" height="200px">
+							    <img src="./fp_imgs/aus3.jpg" height="300px">
+							  </div>
+
+							  <div class="column">
+							        <img src="./fp_imgs/aus5.jpg" height="250px">
+							    <img src="./fp_imgs/aus6.jpg" height="250px">
+							  </div>
+
+							</div>
+
+						</div>
+
+						<div id="usa" class="tabcontent">
+						  
+						  <div class="row d-flex flex-wrap">
+		  
+							  <div class="column">
+							    <img src="./fp_imgs/usa1.jpg" height="280px">
+							    <img src="./fp_imgs/usa2.jpg" height="220px">
+							  </div>
+
+							  <div class="column">
+							        <img src="./fp_imgs/usa4.jpg" height="200px">
+							    <img src="./fp_imgs/usa3.jpg" height="300px">
+							  </div>
+
+							  <div class="column">
+							        <img src="./fp_imgs/usa5.jpg" height="250px">
+							    <img src="./fp_imgs/usa6.jpg" height="250px">
+							  </div>
+
+							</div>
+
+						</div>
+
+						<div id="canada" class="tabcontent">
+						  
+						  <div class="row d-flex flex-wrap">
+		  
+							  <div class="column">
+							    <img src="./fp_imgs/can1.jpg" height="280px">
+							    <img src="./fp_imgs/can2.jpg" height="220px">
+							  </div>
+
+							  <div class="column">
+							        <img src="./fp_imgs/can4.jpg" height="200px">
+							    <img src="./fp_imgs/can3.jpeg" height="300px">
+							  </div>
+
+							  <div class="column">
+							        <img src="./fp_imgs/can5.jpg" height="250px">
+							    <img src="./fp_imgs/can6.jpg" height="250px">
+							  </div>
+
+							</div>
+
+						</div>
+
+						<div id="dubai" class="tabcontent">
+						  
+						  <div class="row d-flex flex-wrap">
+		  
+							  <div class="column">
+							    <img src="./fp_imgs/dub1.jpg" height="280px">
+							    <img src="./fp_imgs/dub2.jpg" height="220px">
+							  </div>
+
+							  <div class="column">
+							        <img src="./fp_imgs/dub4.jpg" height="200px">
+							    <img src="./fp_imgs/dub3.jpg" height="300px">
+							  </div>
+
+							  <div class="column">
+							        <img src="./fp_imgs/dub5.jpg" height="250px">
+							    <img src="./fp_imgs/dub6.jpg" height="250px">
+							  </div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	
+</div>
+
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+<!-- gallery end -->
+
+
+
+<!-- faqs start -->
+
+<div class="container-fluid mt-5 p-5 s1">
+	
+	<div class="row mx-auto pb-4 p-5">
+		
+		<div class="col-md-9 mx-auto text-center">
+			<h3 style="color: white; !important;"> F.A.Q </h3>
+			<h1 style="color: #c2b7b1;"> Frequently Asked Questions </h1>
+		</div>
+
+	</div>
+
+	<div class="row mx-auto pt-0 p-5">
+		
+		<div class="col-md-9 p-0 mx-auto">
+			
+			<div class="accordion" id="accordionmenshealth">
+
+				  <div class="accordion-item"> <!-- item 1 -->
+					    
+					    <h1 class="accordion-header">
+					      <button class="accordion-button accordian_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+					       	Non consectetur a erat nam at lectus urna duis?
+					      </button>
+					    </h1>
+					    
+					    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionmenshealth">
+
+					      <div class="accordion-body">			        
+								Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui
+					      </div>
+					    
+					    </div>
+					  
+					  </div>
+					  
+					  <div class="accordion-item">  <!-- item 2 -->
+					    
+					    <h2 class="accordion-header">
+					    
+					      <button class="accordion-button collapsed accordian_header" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+								Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+					      </button>
+					    
+					    </h2>
+					    
+					    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionmenshealth">
+					    
+					      <div class="accordion-body">
+					        Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+					      </div>
+					    
+					    </div>
+					  </div>
+					  
+					  <div class="accordion-item"> <!-- item 3 -->
+					    
+					    <h2 class="accordion-header">
+					    
+					      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+					        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
+					      </button>
+					    
+					    </h2>
+					    
+					    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionmenshealth">
+					    
+					      <div class="accordion-body">
+
+								Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+
+					      </div>
+			      	  </div>
+
+			      	  <div class="accordion-item"> <!-- item 4 -->
+					    
+					    <h2 class="accordion-header">
+					    
+					      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour">
+					        Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
+					      </button>
+					    
+					    </h2>
+					    
+					    <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionmenshealth">
+					    
+					      <div class="accordion-body">
+												
+								Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui
+
+					      </div>
+			      	  </div>
+
+			      	  <div class="accordion-item"> <!-- item 5 -->
+					    
+					    <h2 class="accordion-header">
+					    
+					      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive">
+					        Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
+					      </button>
+					    
+					    </h2>
+					    
+					    <div id="collapsefive" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionmenshealth">
+					    
+					      <div class="accordion-body">
+
+					      	Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+
+					      </div>
+			      	  </div>
+			   </div>
+			
+			</div>
+			<!-- accordian class end -->
+
+		</div>
+
+	</div>
+
+
+</div>
+</div>
+</div>
+<!-- faqs end -->
+
+
+<!-- footer start -->
+
+<div class="container-fluid p-5" style="background: #212432; overflow-x: hidden;">
+
+	<!-- links start -->
+
+	<div class="row px-4 pb-5">
+		
+		<div class="col-md-2 offset-md-1 mb-4" style="color: #7b7f92; font-size: 1.3rem;">
+    	
+    		<a href="./fp_index.html">
+    			<img src="./fp_imgs/logo2.png" width="215px" height="100px"> <br>
+				</a>
+		</div>
+
+		<div class="col-md-2 offset-md-1" id="f1">
+			
+			<h5 style="color: white;">DESTINATIONS</h5>
+			<ul style="line-height: 2.5;"> 
+				<li><a href="#"  class="footer1_items">INDIA</a></li>
+				<li><a href="#"  class="footer1_items">ABROAD</a></li>
+			</ul>
+
+			<h5 style="color: white;">TRAVEL PLANS</h5>
+			<ul style="line-height: 2.5;">
+				<li><a href="#" class="footer1_items">PLAN A TOUR</a></li>
+				<li><a href="#" class="footer1_items">TRAVEL BLOG</a></li>
+				<li><a href="#" class="footer1_items">TRAVELLERS GUIDE</a></li>				
+			</ul>
+
+		</div>
+
+		<div class="col-md-2" id="f2">
+
+			<h5 style="color: white;">BOOKINGS</h5>
+			<ul style="line-height: 2.5;"> 
+				<li><a href="#" class="footer1_items">HOTELS</a></li>
+				<li><a href="#" class="footer1_items">FLIGHTS</a></li>
+				<li><a href="#" class="footer1_items">TRAIN</a></li>
+				<li><a href="#" class="footer1_items">BUS</a></li>
+				<li><a href="#" class="footer1_items">ADVENTURES</a></li>
+			</ul>
+			
+		</div>
+
+		<div class="col-md-2"id="f3">
+			
+			<h5 style="color: white;">ABOUT</h5>
+			<ul style="line-height: 2.5;">
+				<li><a href="#" class="footer1_items">CAREER</a></li>
+				<li><a href="#" class="footer1_items">TUTORIALS</a></li>
+				<li><a href="#" class="footer1_items">OUR TEAM</a></li>				
+			</ul>
+
+		</div>
+
+		<div class="col-md-2"id="f4">
+			
+			<h5 style="color: white;">TRAVEL BUG PLUS</h5>
+			<ul style="line-height: 2.5;"> 
+				<li><a href="#" class="footer1_items">COMMUNITY</a></li>
+				<li><a href="#" class="footer1_items">BLOG</a></li>
+				<li><a href="#" class="footer1_items">CONTACT US</a></li>
+				<li><a href="#" class="footer1_items">FAQ</a></li>
+				<li><a href="#" class="footer1_items">STORE</a></li>
+			</ul>
+
+		</div>
+
+	</div>
+
+	<!-- links end -->
+
+	<!-- social media start -->
+
+	<div class="row pt-5 mt-1" style="border-top: 2px solid #4e5262;">
+		
+		<div class="col-md-5 offset-md-1 p-0">
+			<h6 style="color: #7b7f92"> Copyright © 2021 Travel Bug. All rights reserved. </h6> <a class="me-4" style="color: #a7aabb; text-decoration:none; " href="#"> Terms of Use </a> &nbsp; <a href="#" style="color: #a7aabb; text-decoration: none;"> Privacy Policy</a>
+		</div>
+
+		<div class="col-md-3 mt-4 offset-md-2">
+			
+			<a href="https://www.youtube.com/" target="_blank" title="YOU TUBE" style="text-decoration: none;"> <img src="./fp_imgs/icons/yt.png"> </a>      &nbsp;&nbsp;
+			
+			<a href="https://in.pinterest.com/" target="_blank" title="PINTREST" style="text-decoration: none;"> <img src="./fp_imgs/icons/pintrest.png"> </a> 	</abbr>	&nbsp;&nbsp;
+			
+			<a href="https://www.facebook.com/" target="_blank" title="FACEBOOK" style="text-decoration: none;"> <img src="./fp_imgs/icons/fb.png"> </a>		&nbsp;&nbsp;
+			
+			<a href="https://www.instagram.com/" target="_blank" title="INSTAGRAM" style="text-decoration: none;"> <img src="./fp_imgs/icons/insta.png"> </a>  </abbr>		&nbsp;&nbsp;
+			
+			<a href="https://twitter.com/?lang=en-in" target="_blank" title="TWITTER" style="text-decoration: none;"> <img src="./fp_imgs/icons/tw.png"> </a>  </abbr>		&nbsp;&nbsp;
+
+		</div>
+	</div>
+
+	<!-- social media end -->
+
+	
+</div>
+
+<div class="contaier-fluid" style="overflow-x: hidden;">
+	<div class="row bg-dark text-center"><h6 style="color: #7b7f92"> Designed & Developed by Anirudha Singla. </h6></div>
+</div>
+
+<div class="to_top" id="top" title="TO TOP">
+	<a href="#page_top"><img src="./fp_imgs/icons/to_top.png" width="100%" height="100%"></a>
+</div>
+
+<!-- footer end -->
+
+
+<!-- floating contact logo start -->
+
+<div class="floating_contact_logo" title="CONTACT US" data-bs-toggle="modal" data-bs-target="#contact_modal">
+	<img src="./fp_imgs/icons/call.png" width="100%" height="100%">
+</div>
+
+<!-- floating contact logo end -->
+
+<div class="modal fade" id="contact_modal" data-bs-backdrop="static">
+  
+  <div class="modal-dialog modal-xl">
+    
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h2 class="modal-title" id="staticBackdropLabel">CONTACT US</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+      <div class="modal-body">
+        
+        <div class="row" style="background: #f2f2f2;">
+        	<div class="col-md-6">
+        		<div class="container">
+						  <form method="post">
+
+						  	<label class="form-label">Name</label>
+						    <input type="text" class="form-control">
+
+						    <label class="form-label">Contact Number</label>
+						    <input type="text" class="form-control">
+
+						    <label class="form-label">E-mail</label>
+						    <input type="email" class="form-control">
+
+						    <label class="form-label">Message</label>
+						    <textarea class="form-control" rows="3"></textarea>		
+
+						    <button type="submit" class="btn mt-4 btn-primary">Submit</button>
+
+						  </form>
+						</div>
+        	</div>
+        	
+        <div class="col-md-6" style="background: #4296cb; color: white;">
+    			
+    			<div class="text-center" style="height: 50%; width: 100%;">
+    				
+    				<h3>Contact Info</h3>
+    				<h5>Address - <br>
+
+							127, dwarka, sector Rd, dwarka, new-delhi, <br>
+							INDIA 700155<br>
+
+							Email Us -<br>
+
+							info@travelbug.co<br>
+							partners@travelbug.co<br>
+
+						</h5>
+
+    			</div>
+
+    			<div style="height: 50%; width: 100%;">
+    				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224091.40838395522!2d76.952835572433!3d28.64689309743342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1645348378327!5m2!1sen!2sin" width="100%" height="90%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    			</div>
+
+    			
+
+        </div>
+
+        </div>
+
+      </div>
+      
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+    
+    </div>
+ 
+  </div>
+
+</div>
+
+
+<!-- nav bar curtain start -->
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a href="#">Articles</a>
+    <a href="#">Destination</a>
+    <a href="#">Blogs</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact Us</a>
+  </div>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+<!-- nav bar curtain end -->
+
+
+
+
+<!-- profile modal content code start -->
+
+    	    <div class="modal fade" id="profile_modal" data-bs-backrop="static">
+
+				
+			<div class="modal-dialog modal-dialog-scrollable modal-xl">
+			
+			 	<!-- modal start -->
+
+				<div class="modal-content">
+					
+					<!-- modal header start	 -->
+
+					<div class="modal-header" style="background: #F2F3F4;">
+						<h4 class="modal-title"> MY ACCOUNT </h4> <!-- heading -->
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					
+					<!-- modal header end -->
+
+					<!-- modal body start -->
+
+					<div class="modal-body">
+						
+						<div class="container-fluid">
+							
+							<div class="row p-4 pb-0">	
+
+								<div class="col-md-5 offset-md-1 me-4 p-0">
+
+									<form>
+
+									<h3 class="mb-5"> <b> Sign in </b> </h3>
+
+									<div class="col mb-4">
+										
+										<label for="email"><h5>Email*:</h5></label>
+							      		<input type="email" class="form-control" id="email" placeholder="Enter E-mail id" name="email" required style="background: #F2F3F4;">
+									
+									</div>
+
+									<div class="col mb-4">
+
+										<label for="pwd"><h5>Password*:</h5></label>
+	        							<input type="password" class="form-control as" id="pwd" placeholder="Enter password" name="pswd" style="background: #F2F3F4;" required>
+									
+									</div>
+
+									<div class="col mb-4">
+
+										<div class="form-check">
+							    		  <input type="checkbox" class="form-check-input" name="remembar_me" value="something" required>
+								     		<label class="form-check-label" for="check1">Remember Me</label>
+							    		</div>
+																	
+									</div>
+
+									<div class="col mb-2">
+			 							
+			 							<button type="submit" class="btn btn-info text-white w-100"> SIGN IN </button>
+										
+									</div>
+
+									<div class="col text-center mb-4">
+										<h6 style="color: #00aeef;"><a href="#" style="text-decoration: none !important;"> Forgot Your Password? </a></h6>
+									</div>
+
+									<div class="col p-3">
+			 							<button type="submit" class="btn text-white w-100 mb-2" style="background: #1877f2;"> <img src="./fp_imgs\icons/fb.png"> SIGN IN </button>
+			 							<button type="submit" class="btn btn-dark text-white w-100"> <img src="./fp_imgs\icons/apple.png"> SIGN IN </button>
+									</div>
+
+								</form>
+								</div>
+
+								<div class="col-md-5" style="background: #F8F9F9;">
+
+									<form>
+									
+									<h3 class="mb-5"> <b> Create An Account </b> </h3>
+
+									<div class="col mb-4">
+										
+										<label for="email"><h5>Email*:</h5></label>
+							      		<input type="email" class="form-control" id="email" placeholder="Enter E-mail id" name="email" required style="background: #F2F3F4;">
+									
+									</div>
+
+									<div class="col mb-4">
+
+										<label for="pwd"><h5>Full Name*:</h5></label>
+	        							<input type="text" class="form-control" placeholder="Enter Full Name"style="background: #F2F3F4;" required>
+									
+									</div>
+
+									<div class="col mb-4">
+
+										<label for="number"><h5>Mobile Number*:</h5></label>
+	        							<input type="text" class="form-control" placeholder="Enter mobile number" size="10" style="background: #F2F3F4;" required>
+																	
+									</div>
+
+									<div class="col mb-2">
+			 							
+			 							<label for="pwd"><h5>Create Password*:</h5></label>
+	        							<input type="password" class="form-control as" id="pwd" placeholder="Create password" name="pswd" style="background: #F2F3F4;" required>
+																			
+									</div>
+
+									<div class="col mb-2">
+			 							
+			 							<label for="pwd"><h5>Confirm Password*:</h5></label>
+	        							<input type="password" class="form-control as" id="pwd" placeholder="confirm password" name="pswd" style="background: #F2F3F4;" required>
+																			
+									</div>
+
+									<div class="col text-center">
+										
+										<div class="form-check">
+							    		  <input type="checkbox" class="form-check-input" name="remembar_me" value="something" required>
+								     		<label class="form-check-label" for="check1"> I Accept All The Terms & Conditions </label>
+							    		</div>
+
+									</div>
+
+									<div class="col mb-2">
+			 							
+			 							<button type="submit" class="btn btn-info text-white w-100"> CREATE ACCOUNT </button>
+										
+									</div>
+
+								</form>
+
+								</div>
+							
+							</div>
+						
+						</div>
+
+					</div>
+
+					<!-- modal body end -->
+
+					<!-- modal footer start -->
+
+					<div class="modal-footer"  style="background: #F2F3F4;">
+						<button type="button" class="btn bg-danger" data-bs-dismiss="modal">CLOSE</button>
+					</div>
+				
+					<!-- modal footer end -->
+				
+				</div>
+			 	
+<!-- profile modal content code end -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<!-- animation jquery script start -->
+
+<script type="text/javascript">
+	
+	$(document).ready(function()
+	{
+		$(window).scroll(function(){
+			var positiontop=$(document).scrollTop();
+			console.log(positiontop);
+
+			if ((positiontop>200)&&(positiontop<250))
+			{			
+				$("#tbp_heading").addClass("tbp_heading_anim");
+			}
+
+			if ((positiontop>220)&&(positiontop<250))
+			{			
+				$("#tbp_points").addClass("tbp_points_anim");
+			}
+
+			if ((positiontop>1500)&&(positiontop<1600))
+			{			
+				$("#blog").addClass("blog_anim");
+			}
+
+			if ((positiontop>1500)&&(positiontop<1600))
+			{			
+				$("#card1").addClass("card_animation");
+			}
+
+			if ((positiontop>1500)&&(positiontop<1600))
+			{			
+				$("#card2").addClass("card_animation");
+			}
+
+			if ((positiontop>1500)&&(positiontop<1600))
+			{			
+				$("#card3").addClass("card_animation");
+			}
+
+			if ((positiontop>4000)&&(positiontop<4100))
+			{			
+				$("#f1").addClass("footer_animation");
+			}
+
+			if ((positiontop>4000)&&(positiontop<4100))
+			{			
+				$("#f2").addClass("footer_animation");
+			}
+
+			if ((positiontop>4000)&&(positiontop<4100))
+			{			
+				$("#f3").addClass("footer_animation");
+			}
+
+			if ((positiontop>4000)&&(positiontop<4100))
+			{			
+				$("#f4").addClass("footer_animation");
+			}
+
+			if ((positiontop>400))
+			{			
+				$("#top").addClass("to_top_2");
+			}
+
+			else
+			{
+				$("#top").removeClass("to_top_2");
+			}
+			
+		})
+	})
+
+</script>
+
+<script type="text/javascript">
+	
+	$(window).on("scroll", function(){
+		if($(window).scrollTop()>50)
+		{
+			$("#page_start").addClass("nav_header_2");
+		}
+		else
+		{
+			$("#page_start").removeClass("nav_header_2");
+		}
+	});
+
+</script>
+
+<!-- animation jquery script end -->
+
+
+</body>
+</html>
